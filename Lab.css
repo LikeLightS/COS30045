@@ -1,0 +1,62 @@
+body 
+{
+    font-family: 'Arial', sans-serif;
+    margin: 50px;
+}
+
+img
+{
+    width: 50%;
+    height: 50%;
+}
+
+.button, .button:focus
+{
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    border-radius: 5px;
+    border-width: 2px;
+    box-shadow: none;
+}
+
+.button:hover
+{
+    background-color: white;
+}
+
+.button:focus
+{
+    font-weight: bold;
+}
+
+.buttonHeader, .buttonHeader:hover
+{
+    border: 2px solid darkturquoise;
+    background-color: darkturquoise;
+    border-color: darkturquoise;
+    text-decoration: none;
+}
+
+.buttonHeader:hover
+{
+    color: darkturquoise;
+    border-color: darkturquoise;
+    background-color: white;
+    border-color: cyan;
+    font-weight: bold;
+}
+
+.buttonHighlight
+{
+    color: cyan;
+    background-color: white;
+    border-color: cyan;
+    font-weight: bold;
+}
+
+footer
+{
+    padding: 50px 0px 50px 0px;
+}

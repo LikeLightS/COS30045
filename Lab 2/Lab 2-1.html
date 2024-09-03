@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="author"			  content="Your name here"/>
+
+	<title>Task 2.1 Drawing with Data: Binding</title>
+
+	<link rel="stylesheet" href="../Lab.css">
+
+	<script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+
+<body>
+    <header>   
+        <div>
+            <a class="button buttonHeader" href="../Main.html">Home Page</a>
+            <a class="button buttonHeader buttonHighlight" href="#">Lab 2.1</a>
+            <a class="button buttonHeader" href="Lab 2-2.html">Lab 2.2</a>
+            <a class="button buttonHeader" href="Lab 2-3.html">Lab 2.3</a>
+			<a class="button buttonHeader" href="Lab 2-4.html">Lab 2.4</a>
+        </div>
+    </header>
+
+	<h1>Drawing with Data: Binding</h1>
+	<h2>Author: Shuen</h2>
+
+	<script>
+		var dataset = [14,5,26,23,9];
+
+		d3.select("body").selectAll("p").data(dataset).enter().append("p")
+		.text(function(d){
+			if (d > 10){
+				return "Joe watched " + d + " cat videos today.";
+			} else {
+				return "Warning: Joe watched " + d + " cat videos today.";
+			}})
+		.style("color",function(d){
+			return d > 10 ? "red" : "black";
+		})
+	</script>
+
+	<footer>COS30045 Data Visualisation</footer>
+
+</body>
+</html>

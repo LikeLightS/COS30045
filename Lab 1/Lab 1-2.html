@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content="Data Visualisation Exercise 1"/>
+	<meta name="keywords"		  content="HTML, CSS"/>
+	<meta name="Shuen"			  content="Teo Zen Shuen"/>
+
+	<title>Task 1.2 Pets and the Pandemic</title>
+
+    <link rel="stylesheet" href="../Lab.css">
+	<style>
+        .buttonOther, .buttonOther:focus
+        {
+            background-color: magenta;
+            border-color: magenta;
+        }
+
+        .buttonOther:focus
+        {
+            font-size: 15px;
+        }
+        
+        .buttonOther:hover
+        {
+            color: magenta;
+            background-color: white;
+            border-color: magenta;
+        }
+	</style>
+
+</head>
+
+<body>
+    <header>   
+        <div>
+            <a class="button buttonHeader" href="../Main.html">Home Page</a>
+            <a class="button buttonHeader" href="Lab 1-1.html">Lab 1.1</a>
+            <a class="button buttonHeader buttonHighlight" href="#">Lab 1.2</a>
+            <a class="button buttonHeader" href="Lab 1-3.html">Lab 1.3</a>
+        </div>
+    </header>
+
+	<h1>Pets and the Pandemic</h1>
+	<h2>Author: Shuen</h2>
+
+    <p>
+        A report from Animal Medicines Australia (AMA) has found that 
+        many Australians took the opportunity to introduce a pet into 
+        their household during the pandemic. Their survey indicated that 
+        there was a significant increase in the percent of households 
+        taking in a new dog, fish or bird. Their research also indicated 
+        that pets had a number of positive influences on their lives such 
+        as:
+    </p>
+
+    <ul>
+        <li>Companionship</li>
+        <li>Better Mental Health</li>
+        <li>Joy and Happiness</li>
+    </ul>
+
+    <div>
+        <button class="button buttonOther" id="button1" onclick="changeImg('./COS30045 1.1 Resources/2019 Graph.png', 'Figure 1, Percent of Popular Pets Owned by Australians in 2019', 'Bar chart showing percentage of popular pets owned by Australians in 2019')">2019</button>
+        <button class="button buttonOther" id="button2" onclick="changeImg('./COS30045 1.1 Resources/2021 Graph.png', 'Figure 2, Percent of Popular Pets Owned by Australians in 2021', 'Bar chart showing percentage of popular pets owned by Australians in 2021')">2021</button>
+        <button class="button buttonOther" id="button3" onclick="changeImg('./COS30045 1.1 Resources/Both Graph.png', 'Figure 3, Percent of Popular Pets Owned by Australians in 2019 & 2021', 'Comparing the percentage of popular pets owned by Australians in 2021')">2019 & 2021</button>
+    </div>
+
+    <figure>
+        <img id="imgDisplay" src="./COS30045 1.1 Resources/2019 Graph.png" alt="Percent of Popular Pets Owned by Australians in 2019">
+        <figcaption id="figure">
+            Figure 1. Percent of popular pets owned by Australians in 2019. 
+        </figcaption>
+    </figure>
+
+    <p>
+        With the increase in pet ownership the AMA are encouraging policy 
+        makers to consider the needs of companion animals and their owners 
+        when considering rental, strata and body corporate regulations are 
+        well as accepting animals in public places and transport.
+    </p>
+	
+
+	<footer>COS30045 Data Visualisation</footer>
+
+    <script src="Lab 1-2.js"></script>
+
+</body>
+</html>
