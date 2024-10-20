@@ -1,10 +1,10 @@
 
 var width = 600;
-var height = 300;
-var margin = 30;
+var height = 400;
+var margin = 50;
 
-var w = 600 - margin;
-var h = 300 - margin;
+var w = width - margin;
+var h = height - margin*2;
 
 var dataset;
 
@@ -36,17 +36,30 @@ function lineChart(dataset)
         .x(function(d) { return xScale(d.date); })
         .y(function(d) { return yScale(d.number); });
 
+    // Shading
+    var area = d3.area()
+        .x(function(d){return xScale(d.date);})
+        .y0(h)
+        .y1(function(d){return yScale(d.number);});
+
     var svg = d3.select("#chart")
                 .append("svg")
-                .attr("width",w)
-                .attr("height",h)
+                .attr("width",width)
+                .attr("height",height)
                 .append("g")
                 .attr("transform","translate("+margin+","+margin+")");
 
     svg.append("path")
         .datum(dataset)
         .attr("class","line")
-        .attr("d",line);
+        .attr("d",line)
+        .attr("fill","blue");
+
+    svg.append("path")
+        .datum(dataset)
+        .attr("class","area")
+        .attr("d",area)
+        .attr("fill","lightblue");
 
     var xAxis = d3.axisBottom(xScale)
                 .ticks(10);
